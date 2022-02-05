@@ -1,0 +1,56 @@
+
+:root {
+  --border: 1px solid white;
+  --main-color: #009EE0;
+}
+
+.mainMenu {
+ display: flex;
+ flex-direction: row;
+ align-items: flex-start;
+ justify-content: center;
+}
+
+.mainMenu .parent:first-child {
+  border-left: var(--border);
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  border-right: var(--border);
+  align-items: center;
+}
+
+.parent .content {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link {
+  padding: 20px;
+}
+
+.child:hover,
+.parent .content:hover {
+  opacity: 0.8;
+}
+
+.parent, .parent a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  width: inherit;
+}
+
+.expand {
+  cursor: pointer;
+  margin: 20px 20px 20px 0;
+}
+
+.child {
+  border: var(--border);
+  width: 100%;
+}
